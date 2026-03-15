@@ -1,0 +1,72 @@
+{
+  "name": "musicshop",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.26.4",
+    "@sap-cloud-sdk/http-client": "^3.26.4",
+    "@sap-cloud-sdk/resilience": "^3.26.4",
+    "@sap-cloud-sdk/util": "^3.26.4",
+    "@sap/cds": "^9.7.1",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "cds": {
+    "requires": {
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "alice": {
+            "password": "123",
+            "roles": [
+              "admin"
+            ]
+          },
+          "bob": {
+            "password": "123",
+            "roles": [
+              "technician"
+            ]
+          },
+          "thomas": {
+            "password": "123",
+            "roles": [
+              "InventoryManager"
+            ]
+          },
+          "susan": {
+            "password": "123",
+            "roles": [
+              "hr"
+            ]
+          }
+        }
+      },
+      "app-service": {
+        "impl": "@sap/low-code-event-handler"
+      },
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "credentials": {
+          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+          "headers": {
+            "APIkey": "LrxsahRqwWQKzmvbDmoaxJslJOyXkRwG"
+          }
+        }
+      }
+    }
+  }
+}

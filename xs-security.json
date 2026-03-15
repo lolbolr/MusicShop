@@ -1,0 +1,53 @@
+{
+  "xsappname": "myapp-aryan",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin access"
+    },
+    {
+      "name": "$XSAPPNAME.Technician",
+      "description": "Technician access"
+    },
+    {
+      "name": "$XSAPPNAME.HR",
+      "description": "HR access"
+    },
+    {
+      "name": "$XSAPPNAME.InventoryManager",
+      "description": "Inventory Manager access"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Admin",
+      "description": "Administrator role",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    },
+    {
+      "name": "Technician",
+      "description": "Technician role",
+      "scope-references": [
+        "$XSAPPNAME.Technician",
+        "$XSAPPNAME.InventoryManager"
+      ]
+    },
+    {
+      "name": "HR",
+      "description": "HR role",
+      "scope-references": [
+        "$XSAPPNAME.HR"
+      ]
+    },
+    {
+      "name": "InventoryManager",
+      "description": "Inventory Manager role",
+      "scope-references": [
+        "$XSAPPNAME.InventoryManager"
+      ]
+    }
+  ]
+}
