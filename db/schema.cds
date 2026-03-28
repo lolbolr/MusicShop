@@ -48,6 +48,7 @@ entity Parts : cuid, managed {
     sku             : String(40)  @mandatory;
     unitPrice       : Decimal(9, 2);
     uom             : String(3) default 'EA';
+    quantity        : Integer;
     instrumentModel : Association to many InstrumentModelsParts
                           on instrumentModel.part = $self;
 }
