@@ -27,7 +27,14 @@ service MusicService @(requires: 'authenticated-user') {
     function dispSupp(myString: String) returns String;
 
 }
+annotate MusicService.Parts : unitPrice with @assert: (case
+                                                         when unitPrice < 0
+                                                              then 'Negative price not allowed'
+                                                         when unitPrice > 1000
+                                                              then 'Too expensive'
+                                                     end);
 
+/*
 service HR @(restrict: [
         {
             grant: 'READ',
@@ -56,4 +63,5 @@ annotate Technician.Parts : unitPrice with @assert: (case
                                                               then 'Negative price not allowed'
                                                          when unitPrice > 1000
                                                               then 'Too expensive'
-                                                     end);
+                                                     end);                                              
+*/
