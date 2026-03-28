@@ -1,17 +1,4 @@
 using music.store as db from '../db/schema';
-using {API_BUSINESS_PARTNER as s4} from './external/API_BUSINESS_PARTNER.cds';
-
-//using { sap.common.CodeList } from '@sap/cds/common';
-
-service BusinessPartner {
-
-    entity A_BusinessPartner as
-        projection on s4.A_BusinessPartner {
-            key BusinessPartner,
-                BusinessPartnerFullName
-        };
-
-}
 
 service MusicService @(requires: 'authenticated-user') {
     entity Instruments      as projection on db.Instruments;
@@ -33,7 +20,6 @@ annotate MusicService.Parts : unitPrice with @assert: (case
                                                          when unitPrice > 1000
                                                               then 'Too expensive'
                                                      end);
-
 /*
 service HR @(restrict: [
         {
