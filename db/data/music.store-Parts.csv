@@ -1,2 +1,2 @@
-ID,name,partType,manufacturer,sku,unitPrice,uom,createdAt,createdBy,modifiedAt,modifiedBy
-14087085-9921-4e62-8528-aad6396698f9,name-14087085,REED,manufacturer-14087085,sku-14087085,3706943.13,085,2020-02-02T00:00:00.000Z,createdBy.8dxnx@example.net,2022-07-26T00:00:00.000Z,modifiedBy.8dxnx@example.com
+ID,name,partType,manufacturer,sku,unitPrice,uom,quantity,createdAt,createdBy,modifiedAt,modifiedBy
+7634709e-d50c-4abe-97d7-d414c9824ca6,name-7634709,STRING,manufacturer-7634709,sku-7634709,598888.8,709,84,2010-06-06T00:00:00.000Z,createdBy.4jmz9@example.org,2007-12-19T00:00:00.000Z,modifiedBy.4jmz9@example.com

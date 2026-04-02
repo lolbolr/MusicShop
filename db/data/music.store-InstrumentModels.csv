@@ -1,2 +1,2 @@
-ID,modelName,version,category,brand,createdAt,createdBy,modifiedAt,modifiedBy
-16348534-0486-46b6-b322-0f538509eb83,modelName-16348534,61,DRUMS,brand-16348534,2003-08-20T00:00:00.000Z,createdBy.9qely@example.com,2004-04-19T00:00:00.000Z,modifiedBy.9qely@example.net
+ID,modelName,version,category,brand,supplier,createdAt,createdBy,modifiedAt,modifiedBy
+2434622b-78db-46ec-987d-c2e5b486067f,modelName-2434622,2,OTHERS,brand-2434622,er-2434622,2019-09-20T00:00:00.000Z,createdBy.1g6ke@example.com,2020-03-07T00:00:00.000Z,modifiedBy.1g6ke@example.com

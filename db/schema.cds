@@ -99,3 +99,19 @@ entity RepairIncidents : cuid, managed {
     resolvedAt  : Timestamp;
     relatedBP   : String(10);
 }
+
+
+entity RepairParts : cuid, managed {
+    incident : Association to RepairIncidents @mandatory;
+    part     : Association to Parts @mandatory;
+    quantity : Integer default 1;
+}
+entity PartRequests : cuid, managed {
+    part        : Association to Parts;
+    quantity    : Integer;
+    status      : String enum {
+      REQUESTED;
+      APPROVED;
+      REJECTED;
+    };
+}

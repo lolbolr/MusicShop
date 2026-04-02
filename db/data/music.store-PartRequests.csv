@@ -1,0 +1,2 @@
+ID,part_ID,quantity,status,createdAt,createdBy,modifiedAt,modifiedBy
+1191251a-80fe-40e3-9cfc-7c895d697a0f,7634709e-d50c-4abe-97d7-d414c9824ca6,5,REQUESTED,2016-04-17T00:00:00.000Z,createdBy.pj6b@example.org,2020-07-28T00:00:00.000Z,modifiedBy.pj6b@example.com

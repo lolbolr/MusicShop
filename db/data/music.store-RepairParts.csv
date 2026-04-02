@@ -1,0 +1,2 @@
+ID,incident_ID,part_ID,quantity,createdAt,createdBy,modifiedAt,modifiedBy
+23398045-b8fa-473a-9c37-14a57a831e56,14807918-8465-4900-be83-57c18b15f679,7634709e-d50c-4abe-97d7-d414c9824ca6,41,2007-04-16T00:00:00.000Z,createdBy.dxi1p@example.com,2016-08-29T00:00:00.000Z,modifiedBy.dxi1p@example.net
