@@ -22,6 +22,54 @@ module.exports = class TechnicianService extends cds.ApplicationService {
             return 'Part request submitted successfully'
         })
 
+        this.on('inprog', 'RepairIncidents', async (req) => {
+            const requestID = req.params[0].ID
+
+            await UPDATE('music.store.RepairIncidents')
+                .set({
+                    status: 'IN_PROGRESS'
+                }).where({
+                    ID: requestID
+                })
+            return 'Incident in progress'
+        })
+
+        this.on('onhold', 'RepairIncidents', async (req) => {
+            const requestID = req.params[0].ID
+
+            await UPDATE('music.store.RepairIncidents')
+                .set({
+                    status: 'ONHOLD'
+                }).where({
+                    ID: requestID
+                })
+            return 'Incident set on hold'
+        })
+
+        this.on('resolved', 'RepairIncidents', async (req) => {
+            const requestID = req.params[0].ID
+
+            await UPDATE('music.store.RepairIncidents')
+                .set({
+                    status: 'RESOLVED'
+                }).where({
+                    ID: requestID
+                })
+            return 'Incident resolved'
+        })
+
+        this.on('cancelled', 'RepairIncidents', async (req) => {
+            const requestID = req.params[0].ID
+
+            await UPDATE('music.store.RepairIncidents')
+                .set({
+                    status: 'CANCELED'
+                }).where({
+                    ID: requestID
+                })
+            return 'Incident cancelled'
+        })
+
         return super.init()
     }
 }

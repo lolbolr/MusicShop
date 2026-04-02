@@ -18,6 +18,6 @@ type IncidentSeverity : String enum{
     LOW; MEDIUM; HIGH; CRITICAL;
 };
 type IncidentStatus : String enum{
-    OPEN; IN_PROGRESS; RESOLVED; CANCELED;
+    OPEN; IN_PROGRESS; ONHOLD; RESOLVED; CANCELED;
 };
 

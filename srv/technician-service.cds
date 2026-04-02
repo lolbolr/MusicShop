@@ -15,7 +15,14 @@ service TechnicianService {
     @readonly
     entity InstrumentParts  as projection on db.InstrumentModelsParts;
 
-    entity RepairIncidents  as projection on db.RepairIncidents;
+    entity RepairIncidents  as projection on db.RepairIncidents
+    actions {
+        action inprog() returns String;
+        action onhold() returns String;
+        action resolved() returns String;
+        action cancelled() returns String;
+    }
+    ;
 
     @readonly
     entity RepairParts      as projection on db.RepairParts;
